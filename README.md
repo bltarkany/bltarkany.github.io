@@ -2,12 +2,12 @@
 
 ### Welcome to my Portfolio 
 
-    Here you will find a collection of my work, including:
-        * Current studies
-        * Personal projects
-        * Collaboration projects
+Here you will find a collection of my work, including:
+* Current studies
+* Personal projects
+* Collaboration projects
     
-    Along with these you have the opportunity to learn more about myself and my goals as a Developer. Enjoy!
+Along with these you have the opportunity to learn more about myself and my goals as a Developer. Enjoy!
 
 
 ### Overview 
