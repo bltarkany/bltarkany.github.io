@@ -7,9 +7,11 @@ import './App.css';
 
 function App() {
   return (
-    <Container maxWidth='lg'>
-
-    </Container>
+    <Router>
+      <Container maxWidth='lg'>
+        
+      </Container>
+    </Router>
   );
 }
 
