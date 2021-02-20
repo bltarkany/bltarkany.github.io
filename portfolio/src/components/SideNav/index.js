@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
+    list: {
+        width: 250,
+    },
     fixed: {
         top: 0,
         bottom: 'auto',
@@ -29,8 +32,21 @@ const useStyles = makeStyles((theme) => ({
         // fontWeight: 500,
         fontSize: '2rem',
         color: '#87A3A3'
+    },
+    navColor: {
+        backgroundColor: 'fffcff',
+    },
+    icons: {
+        color: '#FF3E41',
+        fontSize: '2rem'
+    },
+    routes: {
+        textDecoration: 'none',
+        fontFamily: 'Cormorant Garamond, serif',
+        fontWeight: 500,
+        fontSize: '1.8rem',
+        color: 'black'
     }
-
 }));
 
 // temporary drawer state
@@ -52,34 +68,26 @@ export default function SideNav() {
 
     // nav list items with 
     const list = (anchor) => (
-        <div role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
-            <List>
+        <div className={classes.list} role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
+            <List className={classes.navColor}>
                 <ListItem>
-                    <Link to='/'>
-                        <ListItemIcon></ListItemIcon>
-                        <ListItemText>Home</ListItemText>
-                    </Link>
+                    <ListItemIcon className={classes.icons}><i class="fal fa-home"></i></ListItemIcon>
+                    <ListItemText><Link className={classes.routes} to='/'>Home</Link></ListItemText>
                 </ListItem>
                 <ListItem>
-                    <Link to='/about'>
-                        <ListItemIcon></ListItemIcon>
-                        <ListItemText>Bio</ListItemText>
-                    </Link>
+                    <ListItemIcon className={classes.icons}><i class="fal fa-stars"></i></ListItemIcon>
+                    <ListItemText><Link className={classes.routes} to='/about'>Bio</Link></ListItemText>
                 </ListItem>
                 <ListItem>
-                    <Link to='/portfolio'>
-                        <ListItemIcon></ListItemIcon>
-                        <ListItemText>Projects</ListItemText>
-                    </Link>
+                    <ListItemIcon className={classes.icons}><i class="fal fa-code-branch"></i></ListItemIcon>
+                    <ListItemText><Link className={classes.routes} to='/portfolio'>Projects</Link></ListItemText>                   
                 </ListItem>
                 <ListItem>
-                    <Link to='/contact'>
-                        <ListItemIcon></ListItemIcon>
-                        <ListItemText>Contact</ListItemText>
-                    </Link>
+                    <ListItemIcon className={classes.icons}><i class="fal fa-address-book"></i></ListItemIcon>
+                    <ListItemText><Link className={classes.routes} to='/contact'>Contact</Link></ListItemText>                   
                 </ListItem>
             </List>
-            <Divider/>
+            <Divider />
             <List>
                 <ListItem>
                     <ProLinks />
@@ -91,10 +99,13 @@ export default function SideNav() {
 
 
     return (
-        <>
-            {/* <Button onClick={toggleDrawer(anchor, true)}><i class="fad fa-ellipsis-h"></i></Button> */}
-            <Button className={classes.button} ><i class="fas fa-ellipsis-v-alt"></i></Button>
-        </>
+        <div>
+            <Button className={classes.button} onClick={toggleDrawer('left', true)}><i class="fas fa-ellipsis-v-alt"></i></Button>
+            {/* <Button className={classes.button} ><i class="fas fa-ellipsis-v-alt"></i></Button> */}
+            <Drawer className={classes.navColor} anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
+                {list('left')}
+            </Drawer>
+        </div>
     )
 
 }
