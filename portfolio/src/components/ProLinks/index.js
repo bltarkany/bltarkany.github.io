@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
         '& > * + *': {
             marginLeft: theme.spacing(2),
         },
-    }, 
+    },
     icons: {
         color: '#FF3E41'
     }
@@ -21,15 +21,15 @@ export default function ProLinks() {
     const preventDefault = (event) => event.preventDefault();
 
     return (
-        <Typography className={`${classes.root} ${classes.icons}`}>
+        <Typography className={`${classes.root} ${classes.icons}`} underline='none'>
             <Link href="https://www.linkedin.com/in/bobbi-tarkany/" onClick={preventDefault}>
-            <i class="fab fa-linkedin"></i>
+                <i class="fab fa-linkedin"></i>
             </Link>
             <Link href="https://github.com/bltarkany" onClick={preventDefault} color="inherit">
-            <i class="fab fa-github-square"></i>
+                <i class="fab fa-github-square"></i>
             </Link>
             <Link href="https://drive.google.com/file/d/1ttonDuFayhPhww-ePVTzQWryl0ayu1Y3/view?usp=sharing" onClick={preventDefault} variant="body2">
-            <i class="fad fa-file-user"></i>
+                <i class="fad fa-file-user"></i>
             </Link>
         </Typography>
     )
