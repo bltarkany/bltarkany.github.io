@@ -1,10 +1,33 @@
 body {
     font-family: 'Cormorant Infant', serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+/* fixed header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 /* nav bar styling */
 nav {
-    background-color: #c3bef7;
+    background: transparent;
 }
 
 
+/* caption adjustments */
+.paraCap {
+    position: absolute;
+    top: 25%;
+}
+
+/* Intro Caption */
+#title {
+    font-size: 58px;
+}
+/* intro parallax  */
+.para-init {
+    opacity: 0.5;
+}
