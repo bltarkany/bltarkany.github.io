@@ -9,6 +9,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Drawer from '@material-ui/core/Drawer';
 import { Link } from 'react-router-dom';
+import ProLinks from "../ProLinks";
 
 
 // create style classes
@@ -81,13 +82,13 @@ export default function SideNav() {
             <Divider/>
             <List>
                 <ListItem>
-
+                    <ProLinks />
                 </ListItem>
             </List>
         </div>
     );
 
-    
+
 
     return (
         <>
