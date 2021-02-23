@@ -8,16 +8,22 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
+    fixed: {
+        top: 0,
+        bottom: auto
+    }
 
 }));
 
 
 export default function Header({ onClick }) {
+    const classes = useStyles();
     // header build with side drawer trigger
     return (
-        <header>
-
+        <header position="fixed" className={`${classes.root} ${classes.fixed}`}>
+            <Grid container direction='row' justify='center' alignItems='center'>
+                <Grid ></Grid>
+            </Grid>
         </header>
     )
-
 }
