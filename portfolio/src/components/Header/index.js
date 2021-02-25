@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import List from '@material-ui/core/List';
+
 
 // create style classes
 const useStyles = makeStyles((theme) => ({
@@ -16,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // temporary drawer state
-export default function TemporaryDrawer(){
+export default function TemporaryDrawer() {
     // classes for direction of the drawer
     const classes = useStyles();
     const [state, setState] = React.useState({
@@ -26,11 +28,18 @@ export default function TemporaryDrawer(){
     // toggle the drawer
     const toggleDrawer = (anchor, open) => (event) => {
         // handling edge cases
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')){
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
         setState({ ...state, [anchor]: open });
     };
+
+    // nav list items with 
+    const list = (anchor) => (
+        <div className={ } role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
+
+        </div>
+    )
 }
 
 
