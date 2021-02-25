@@ -17,11 +17,22 @@ const useStyles = makeStyles((theme) => ({
 
 // temporary drawer state
 export default function TemporaryDrawer(){
+    // classes for direction of the drawer
     const classes = useStyles();
     const [state, setState] = React.useState({
         left: false,
-    })
+    });
+
+    // toggle the drawer
+    const toggleDrawer = (anchor, open) => (event) => {
+        // handling edge cases
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')){
+            return;
+        }
+        setState({ ...state, [anchor]: open });
+    };
 }
+
 
 
 export default function Header({ onClick }) {
