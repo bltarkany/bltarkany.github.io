@@ -22,7 +22,15 @@ export default function Header({ onClick }) {
     return (
         <header position="fixed" className={`${classes.root} ${classes.fixed}`}>
             <Grid container direction='row' justify='center' alignItems='center'>
-                <Grid ></Grid>
+                <Grid xs >
+                    
+                </Grid>
+                <Grid xs={10}>
+                    <Typography variant="h1" component="h2">
+                        Bobbi Tarkany
+                    </Typography>
+                </Grid>
+                <Grid xs></Grid>
             </Grid>
         </header>
     )
