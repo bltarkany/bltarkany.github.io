@@ -8,6 +8,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Drawer from '@material-ui/core/Drawer';
+import Link from 'react-router-dom'
 
 
 // create style classes
@@ -56,7 +57,7 @@ export default function Header({ onClick }) {
         <header position="fixed" className={`${classes.root} ${classes.fixed}`}>
             <Grid container direction='row' justify='center' alignItems='center'>
                 <Grid xs >
-
+                    <Button onClick={toggleDrawer(anchor, true)}><i class="fad fa-ellipsis-h"></i></Button>
                 </Grid>
                 <Grid xs={10}>
                     <Typography variant="h1" component="h2">
