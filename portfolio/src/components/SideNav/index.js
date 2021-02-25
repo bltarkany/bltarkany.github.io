@@ -8,7 +8,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Drawer from '@material-ui/core/Drawer';
-import Link from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 
 // create style classes
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         top: 0,
         bottom: 'auto',
         padding: theme.spacing(2),
-        textAlign: 'center',     
+        textAlign: 'center',
     },
     button: {
         textAlign: 'center',
@@ -50,11 +50,44 @@ export default function SideNav() {
     };
 
     // nav list items with 
-    // const list = (anchor) => (
-    //     <div className={ } role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
+    const list = (anchor) => (
+        <div role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
+            <List>
+                <ListItem>
+                    <Link to='/'>
+                        <ListItemIcon></ListItemIcon>
+                        <ListItemText>Home</ListItemText>
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    <Link to='/about'>
+                        <ListItemIcon></ListItemIcon>
+                        <ListItemText>Bio</ListItemText>
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    <Link to='/portfolio'>
+                        <ListItemIcon></ListItemIcon>
+                        <ListItemText>Projects</ListItemText>
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    <Link to='/contact'>
+                        <ListItemIcon></ListItemIcon>
+                        <ListItemText>Contact</ListItemText>
+                    </Link>
+                </ListItem>
+            </List>
+            <Divider/>
+            <List>
+                <ListItem>
 
-    //     </div>
-    // )
+                </ListItem>
+            </List>
+        </div>
+    );
+
+    
 
     return (
         <>
