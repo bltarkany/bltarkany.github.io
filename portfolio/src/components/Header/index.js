@@ -8,7 +8,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Drawer from '@material-ui/core/Drawer';
-import Link from 'react-router-dom'
+import Link from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
+import { spacing } from '@material-ui/system';
 
 
 // create style classes
@@ -18,35 +20,43 @@ const useStyles = makeStyles((theme) => ({
     },
     fixed: {
         top: 0,
-        bottom: auto
+        bottom: 'auto',
+        padding: theme.spacing(3),
+        textAlign: 'center',     
+    },
+    heading: {
+        textAlign: 'center',
+        fontFamily: 'Cormorant Garamond, serif',
+        fontWeight: 500,
+        fontSize: '2.5rem'
     }
 
 }));
 
 // temporary drawer state
-export default function TemporaryDrawer() {
-    // classes for direction of the drawer
-    const classes = useStyles();
-    const [state, setState] = React.useState({
-        left: false,
-    });
+// export default function TemporaryDrawer() {
+//     // classes for direction of the drawer
+//     const classes = useStyles();
+//     const [state, setState] = React.useState({
+//         left: false,
+//     });
 
-    // toggle the drawer
-    const toggleDrawer = (anchor, open) => (event) => {
-        // handling edge cases
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
-        setState({ ...state, [anchor]: open });
-    };
+//     // toggle the drawer
+//     const toggleDrawer = (anchor, open) => (event) => {
+//         // handling edge cases
+//         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//             return;
+//         }
+//         setState({ ...state, [anchor]: open });
+//     };
 
-    // nav list items with 
-    // const list = (anchor) => (
-    //     <div className={ } role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
+//     // nav list items with 
+//     // const list = (anchor) => (
+//     //     <div className={ } role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
 
-    //     </div>
-    // )
-}
+//     //     </div>
+//     // )
+// }
 
 
 
@@ -54,13 +64,13 @@ export default function Header() {
     const classes = useStyles();
     // header build with side drawer trigger
     return (
-        <header position="fixed" className={`${classes.root} ${classes.fixed}`}>
-            <Grid container direction='row' justify='center' alignItems='center'>
+        <header position="fixed" className={`${classes.root} ${classes.fixed}`}p={2}>
+            <Grid container direction='row' justify='center' alignItems='center' p={2}>
                 <Grid xs >
-                    <Button onClick={toggleDrawer(anchor, true)}><i class="fad fa-ellipsis-h"></i></Button>
+                    {/* <Button onClick={toggleDrawer(anchor, true)}><i class="fad fa-ellipsis-h"></i></Button> */}
                 </Grid>
-                <Grid xs={10}>
-                    <Typography variant="h1" component="h2">
+                <Grid xs={10} >
+                    <Typography variant='h1' className={classes.heading} align='center'>
                         Bobbi Tarkany
                     </Typography>
                 </Grid>
