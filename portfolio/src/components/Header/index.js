@@ -15,6 +15,14 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+// temporary drawer state
+export default function TemporaryDrawer(){
+    const classes = useStyles();
+    const [state, setState] = React.useState({
+        left: false,
+    })
+}
+
 
 export default function Header({ onClick }) {
     const classes = useStyles();
@@ -23,7 +31,7 @@ export default function Header({ onClick }) {
         <header position="fixed" className={`${classes.root} ${classes.fixed}`}>
             <Grid container direction='row' justify='center' alignItems='center'>
                 <Grid xs >
-                    
+
                 </Grid>
                 <Grid xs={10}>
                     <Typography variant="h1" component="h2">
