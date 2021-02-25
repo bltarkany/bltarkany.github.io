@@ -41,16 +41,16 @@ export default function TemporaryDrawer() {
     };
 
     // nav list items with 
-    const list = (anchor) => (
-        <div className={ } role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
+    // const list = (anchor) => (
+    //     <div className={ } role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
 
-        </div>
-    )
+    //     </div>
+    // )
 }
 
 
 
-export default function Header({ onClick }) {
+export default function Header() {
     const classes = useStyles();
     // header build with side drawer trigger
     return (
