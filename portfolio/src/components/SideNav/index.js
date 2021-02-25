@@ -11,6 +11,27 @@ import Drawer from '@material-ui/core/Drawer';
 import Link from 'react-router-dom'; 
 
 
+// create style classes
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+    },
+    fixed: {
+        top: 0,
+        bottom: 'auto',
+        padding: theme.spacing(2),
+        textAlign: 'center',     
+    },
+    button: {
+        textAlign: 'center',
+        fontFamily: 'Cormorant Garamond, serif',
+        // fontWeight: 500,
+        fontSize: '2rem',
+        color: '#87A3A3'
+    }
+
+}));
+
 // temporary drawer state
 export default function SideNav() {
     // classes for direction of the drawer
@@ -29,9 +50,17 @@ export default function SideNav() {
     };
 
     // nav list items with 
-    const list = (anchor) => (
-        <div className={ } role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
+    // const list = (anchor) => (
+    //     <div className={ } role='presentation' onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
 
-        </div>
+    //     </div>
+    // )
+
+    return (
+        <>
+            {/* <Button onClick={toggleDrawer(anchor, true)}><i class="fad fa-ellipsis-h"></i></Button> */}
+            <Button className={classes.button} ><i class="fas fa-ellipsis-v-alt"></i></Button>
+        </>
     )
+
 }
