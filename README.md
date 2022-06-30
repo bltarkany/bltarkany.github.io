@@ -19,3 +19,5 @@ Along with these you have the opportunity to learn more about myself and my goal
     * Hyperlinks and more
 * 
 
+
+#8fb5a5
