@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+/* 
+font-family: 'Arima', system-ui;
+font-family: 'Cormorant', serif;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Instrument Serif', serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Merienda', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Zeyada', cursive; */
+
+.arima {
+  font-family: 'Arima', system-ui;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cormorant{
+  font-family: 'Cormorant', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cormorantg{
+  font-family: 'Cormorant Garamond', serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.instrument{
+  font-family: 'Instrument Serif', serif;
 }
 
-.App-link {
-  color: #61dafb;
+.kaushan{
+  font-family: 'Kaushan Script', cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.merienda{
+  font-family: 'Merienda', cursive;
+}
+
+.montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.shadows{
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.zeyada{
+  font-family: 'Zeyada', cursive;
 }
