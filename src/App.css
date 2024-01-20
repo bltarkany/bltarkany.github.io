@@ -1,3 +1,28 @@
+/* coolors */
+/*  */
+
+/* root */
+:root {
+  --bg-linen: rgb(243, 233, 226);
+  --bg-white-smoke: #F7F5F3;
+  --bg-white: #FFFFFF;
+  --bg-platinum: #E0E0E2;
+  --bg-isabelline: #F9F4F1;
+  --bg-timberwolf: #E7E0DA;
+  --main-night: #131614;
+  --main-smokey: #12100E;
+  --secondary-reseda: #727D71;
+  --secondary-hooker: #5B7B7A;
+  --secondary-carmine: #931F1D;
+  --secondary-caput: #502B2F;
+
+}
+
+/* body styles */
+body {
+  background-color: var(--bg-isabelline);
+}
+
 /* 
 font-family: 'Arima', system-ui;
 font-family: 'Cormorant', serif;
@@ -7,40 +32,57 @@ font-family: 'Kaushan Script', cursive;
 font-family: 'Merienda', cursive;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Shadows Into Light', cursive;
-font-family: 'Zeyada', cursive; */
+font-family: 'Zeyada', cursive; 
+font-family: 'Playfair Display', serif;*/
 
 .arima {
-  font-family: 'Arima', system-ui;
+  font-family: 'Arima', system-ui !important;
+  /* font-size: 40px !important; */
 }
 
-.cormorant{
-  font-family: 'Cormorant', serif;
+.cormorant {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
 }
 
-.cormorantg{
-  font-family: 'Cormorant Garamond', serif;
+.cormorantg {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400 !important;
+  font-size: 20px !important;
 }
 
-.instrument{
-  font-family: 'Instrument Serif', serif;
+.instrument {
+  font-family: 'Instrument Serif', serif !important;
+  /* font-size: 40px !important; */
 }
 
-.kaushan{
-  font-family: 'Kaushan Script', cursive;
+.kaushan {
+  font-family: 'Kaushan Script', cursive !important;
+  /* color: var(--secondary-reseda);
+  background-color: var(--main-night); */
+  /* font-size: 40px !important; */
 }
 
-.merienda{
-  font-family: 'Merienda', cursive;
+.merienda {
+  font-family: 'Merienda', cursive !important;
+  color: var(--secondary-reseda);
+
+  /* font-size: 40px !important; */
 }
 
-.montserrat{
-  font-family: 'Montserrat', sans-serif;
+.montserrat {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
 }
 
-.shadows{
-  font-family: 'Shadows Into Light', cursive;
+.shadows {
+  font-family: 'Shadows Into Light', cursive !important;
+  /* font-size: 40px !important; */
 }
 
-.zeyada{
-  font-family: 'Zeyada', cursive;
+.zeyada {
+  font-family: 'Zeyada', cursive !important;
+  /* font-size: 40px !important; */
 }
